@@ -1,8 +1,14 @@
 #!/bin/sh
 
-IP=192.168.178.101
 PORT=1337
 SLEEP_DURATION=0.01
+
+# parse arg
+if [ "$#" -ne 1 ]; then
+    echo "Usage: ./test.sh IP"
+    exit 1
+fi
+IP="$1"
 
 while true; do
 
